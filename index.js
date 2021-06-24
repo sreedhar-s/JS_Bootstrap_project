@@ -1,8 +1,8 @@
-// Parent 
 const taskContainer = document.querySelector(".task_container");
 // console.log(taskContainer);
 
-const newcard = ({id,imageUrl,taskTitle,taskDescription,taskType}) => `<div class="col-md-6 col-lg-4 id=${id}>
+const newcard = ({id,imageUrl,taskTitle,taskDescription,taskType}) => 
+`<div class="col-md-6 col-lg-4 id=${id}">
 <div class="card">
   <div class="card-header d-flex justify-content-end gap-2">
     <button type="button" class="btn btn-outline-success"><i class="fas fa-pencil-alt"></i></button>
@@ -18,7 +18,6 @@ const newcard = ({id,imageUrl,taskTitle,taskDescription,taskType}) => `<div clas
     <button type="button" class="btn btn-outline-primary float-end">Open Task</button>
   </div>
 </div>
-</div>
 </div>`;
 
 const saveChanges = () => {
@@ -33,3 +32,4 @@ const saveChanges = () => {
     const createNewCard = newcard(taskData);
     taskContainer.insertAdjacentHTML("beforeend",createNewCard);
 };
+
